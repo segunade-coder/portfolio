@@ -1,0 +1,60 @@
+header {
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem 9%;
+  background-color: var(--background);
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+header .logo-container {
+  font-size: 2.5rem;
+  color: var(--text-color);
+  font-weight: bold;
+  cursor: default;
+}
+header #menu-icon {
+  color: var(--text-color);
+  display: none;
+}
+header a {
+  font-size: 1.7rem;
+  color: var(--text-color);
+  margin-left: 4rem;
+  text-decoration: none;
+}
+header nav {
+  display: flex;
+  justify-content: flex-end;
+}
+header nav a {
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: bold;
+  position: relative;
+  padding: 0 0 0.8rem;
+}
+header nav a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 3px;
+  left: 0;
+  bottom: 0;
+  background-color: white;
+  transition: 0.4s width ease-in-out;
+}
+header nav a:hover, header nav a .active {
+  color: var(--main-color);
+}
+header nav a:hover::after, header nav a .active::after {
+  width: 100%;
+}
+header nav .active {
+  color: var(--main-color);
+}/*# sourceMappingURL=navbar.css.map */
