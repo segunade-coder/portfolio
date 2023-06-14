@@ -10,7 +10,7 @@ const NavBar = () => {
       <RiMenu2Fill size={30} id="menu-icon" />
       <nav>
         {navigations.map((a, i) => (
-          <a key={i} to={a.url} className={i === 0 ? "active" : ""}>
+          <a key={i} href={a.url} className={i === 0 ? "active" : ""}>
             {a.name}
           </a>
         ))}
