@@ -11,15 +11,32 @@ header {
   align-items: center;
   z-index: 100;
 }
+@media screen and (max-width: 991px) {
+  header {
+    padding: 2rem 3%;
+  }
+}
 header .logo-container {
   font-size: 2.5rem;
   color: var(--text-color);
   font-weight: bold;
   cursor: default;
 }
-header #menu-icon {
+header #menu-icon-close, header #menu-icon-open {
   color: var(--text-color);
   display: none;
+}
+@media screen and (max-width: 768px) {
+  header #menu-icon-close, header #menu-icon-open {
+    display: block;
+    cursor: pointer;
+  }
+}
+header .show-menu {
+  display: block !important;
+}
+header .close-menu {
+  display: none !important;
 }
 header a {
   font-size: 1.7rem;
@@ -31,6 +48,19 @@ header nav {
   display: flex;
   justify-content: flex-end;
 }
+@media screen and (max-width: 768px) {
+  header nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 1rem 3%;
+    background-color: var(--background);
+    border-bottom: 1rem solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+    display: none;
+  }
+}
 header nav a {
   cursor: pointer;
   text-decoration: none;
@@ -38,6 +68,16 @@ header nav a {
   font-weight: bold;
   position: relative;
   padding: 0 0.5rem 1rem;
+}
+@media screen and (max-width: 768px) {
+  header nav a {
+    display: block;
+    font-size: 2rem;
+    margin: 3rem 0;
+  }
+  header nav a::after {
+    display: none;
+  }
 }
 header nav a::after {
   content: "";
@@ -57,4 +97,11 @@ header nav a:hover::after, header nav a .active::after {
 }
 header nav .active {
   color: var(--main-color);
+}
+header .active {
+  display: block;
+}
+
+.sticky {
+  border-bottom: 0.1rem solid rgba(0, 0, 0, 0.2);
 }/*# sourceMappingURL=navbar.css.map */
